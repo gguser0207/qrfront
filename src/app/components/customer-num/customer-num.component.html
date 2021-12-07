@@ -1,0 +1,49 @@
+<br>
+<h1 class="text-center">대기 순번 </h1>
+<div>
+  <div class="text-right mt-6">
+    <p class="text-success">대기자: {{ customersQuantity }}</p>
+  </div>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr class="text-center">
+        <th scope="col">순번</th>
+        <th scope="col">이름</th>
+        <!-- <th scope="col">Email</th> -->
+        <!-- <th scope="col">ID</th> -->
+        <th scope="col">대기 등록 시간</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let customer of customers; let i = index">
+        <td class="text-center" style="width: 20%;">
+          <h5>{{i+1}}</h5>
+        </td>
+        <td class="text-center" style="width: 40%;">
+          <h5>{{ customer.name }}</h5>
+        </td>
+        <!-- <td class="text-center" style="width: 20%;">
+            <h5>{{ customer.email }}</h5>
+          </td> -->
+        <!-- <td class="text-center" style="width: 20%;">
+          <h5>{{ customer.username }}</h5>
+        </td> -->
+        <!-- <td class="text-center" style="width: 20%;">
+          <h5>{{ customer.password }}</h5>
+        </td> -->
+        <td class="text-center" style="width: 40%;">
+            <h5>{{customer.time| date: 'MM/dd hh:mm:ss a'}}</h5>
+          </td>
+
+        <!--<td class="text-center" style="width: 10%;">
+          <button (click)="deleteCustomer(customer._id)" class="btn btn-danger">삭제</button>
+        </td>-->
+        <!-- <td class="text-center" style="width: 5%;">
+          <button (click)="editEmployee(employee)" class="btn btn-warning">Edit</button>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+

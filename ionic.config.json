@@ -1,0 +1,7 @@
+{
+  "name": "qrfront",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,43 @@
+<style type="text/css">
+
+    .blank {
+        height: 150px;
+    }
+        </style>
+    <br>
+    <br>
+    <br>
+
+    <div *ngIf="!checkLoggedIn()" style= "text-align: center; vertical-align:top">
+    <h1 >아직 계정이 없으신가요?</h1>
+    <h4> 계정이 있으시면 로그인하세요!</h4>
+    <br>
+    <button *ngIf="!checkLoggedIn()" type="button"  class="btn btn-primary"
+            routerLink='/register'>회원가입</button>
+            &nbsp;
+            <button  *ngIf="!checkLoggedIn()" type="button"  style=  "text-align: center;  vertical-align:top" class="btn btn-primary" type="button" class="btn btn-primary"
+            routerLink='/login'>로그인</button>
+            &nbsp;
+            <button  *ngIf="!checkLoggedIn()" type="button"  style=  "text-align: center;  vertical-align:top" class="btn btn-primary" type="button" class="btn btn-primary"
+            routerLink='/business'>사업자 회원 가입</button>
+            &nbsp;
+            <button  *ngIf="!checkLoggedIn()" type="button"  style=  "text-align: center;  vertical-align:top" class="btn btn-primary" type="button" class="btn btn-primary"
+            routerLink='/businesslogin'>사업자 로그인</button>
+            &nbsp;
+            <button  *ngIf="!checkLoggedIn()" type="button"  style=  "text-align: center;  vertical-align:top" class="btn btn-primary" type="button" class="btn btn-primary"
+            routerLink='/nologon'>비회원 순번 등록</button>
+
+        <app-nologon></app-nologon>
+    </div>
+        <br> 
+       <div  *ngIf="checkLoggedIn()" style=  "text-align: left ; vertical-align:bottom;">
+        <div *ngIf="name">
+              <h2 class="page-header">{{ name }}님 환영합니다!</h2>
+              <h2> {{ name }}님의 현재 대기 상황은 다음과 같습니다.</h2>              
+              
+            </div>
+            <br>
+
+      <app-customer-num></app-customer-num>
+
+    </div>

@@ -1,0 +1,20 @@
+<div *ngIf="user">
+  <div id="container">
+      <div id="block">
+        <br>
+          <h2 class="page-header">QR코드 데이터</h2>
+          <br>
+          <ul class="list-group">
+              <h4>{{user.name}}님의 QR코드</h4>
+              <li class="list-group-item">이메일 : {{user.email}}</li>
+              <li class="list-group-item">생일 : {{user.birth}}</li>
+              <li class="list-group-item">대기 등록 시간 : {{this.kr_curr| date: 'hh:mm:ss a'}}</li>
+          </ul>
+          <br>
+          <div *ngIf="createdCode" class="qrdata">
+            <ngx-qrcode [element-type]="img" [value]="createdCode">
+            </ngx-qrcode>
+          </div>
+      </div>
+  </div>
+</div>

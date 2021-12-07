@@ -1,0 +1,20 @@
+<br>
+<h2 class="page-header">Qyaho 사업자 로그인</h2>
+<br>
+<form (ngSubmit) = "onLoginSubmit()">
+    <div class="form-group">
+        <label>ID</label>
+        <input type="text" class="form-control" name="username" [(ngModel)]="username">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>비밀번호</label>
+        <input type="password" class="form-control" name="password" [(ngModel)]="password">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>사업자 번호(번호만 입력하세요.)</label>
+        <input type="text" class="form-control" name="licenseNum" [(ngModel)]="licenseNum">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Login">
+</form>
