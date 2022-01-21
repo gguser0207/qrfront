@@ -51,7 +51,7 @@ export class QrscanComponent {
           audio: false,
           video: {
             deviceId: videoDevices[ 0 ].deviceId,
-            autoGainControl: true,
+            
             width: 960,
             height: 640,
           },
@@ -101,6 +101,7 @@ export class QrscanComponent {
         console.log(qrcode.data); //{"name":"이현수","username":"gg","email":"free@naver.com","birth":"2021-10-02","time":1633333611491}
         //qrcode.data = qrcode.data + ",no:"+this.no;
         console.log(this.no);
+
 
         const par = JSON.parse(qrcode.data);
         par.no = this.no;
